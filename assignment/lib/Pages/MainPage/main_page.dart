@@ -1,12 +1,10 @@
 import 'package:assignment/Pages/MainPage/Brands.dart';
 import 'package:assignment/Pages/MainPage/new_arrival_grid.dart';
 import 'package:assignment/Pages/MainPage/search_bar.dart';
+import 'package:assignment/Pages/MainPage/text_and_viewall.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
-
+import 'app_bar_row.dart';
 import 'header.dart';
-import 'new_arrival_tile.dart';
 
 class MainPage extends StatelessWidget {
   const MainPage({super.key});
@@ -15,99 +13,53 @@ class MainPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: AppBar(
-        elevation: 0,
-        backgroundColor: Colors.white,
-        centerTitle: true,
-        title: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Ink(
-              decoration: const ShapeDecoration(
-                color: Color.fromARGB(255, 224, 220, 220),
-                shape: CircleBorder(),
-              ),
-              child: IconButton(
-                onPressed: () {},
-                icon: const Icon(
+      body: SafeArea(
+        child: CustomScrollView(
+          physics: const BouncingScrollPhysics(),
+          slivers: [
+            const SliverAppBar(
+              floating: true,
+              elevation: 0,
+              backgroundColor: Colors.white,
+              centerTitle: true,
+              title: AppBarRow(
+                title: '375×Hug',
+                leftIcon: Icon(
                   Icons.add,
                   color: Colors.black,
                 ),
-              ),
-            ),
-            Container(
-              decoration: const BoxDecoration(
-                color: Color.fromARGB(255, 159, 30, 224),
-                borderRadius: BorderRadius.all(Radius.circular(5)),
-              ),
-              padding: const EdgeInsets.fromLTRB(10, 6, 10, 6),
-              margin: const EdgeInsets.only(top: 17),
-              child: const Text(
-                '375*Hug',
-                style: TextStyle(fontSize: 25),
-              ),
-            ),
-            Ink(
-              decoration: const ShapeDecoration(
-                color: Color.fromARGB(255, 224, 220, 220),
-                shape: CircleBorder(),
-              ),
-              child: IconButton(
-                onPressed: () {},
-                icon: const Icon(
+                rightIcon: Icon(
                   Icons.remove,
                   color: Colors.black,
                 ),
               ),
             ),
-          ],
-        ),
-      ),
-      body: SingleChildScrollView(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            _space(20.0),
-            Container(
-              margin: const EdgeInsets.only(left: 15.0),
-              child: const Header(
-                title: 'Hemendra',
-                subtitle: 'Welcome to Laza.',
-              ),
-            ),
-            _space(20.0),
-            Container(
-              margin: const EdgeInsets.only(left: 15.0, right: 15.0),
-              child: const SearchBar(),
-            ),
-            _space(20.0),
-            Container(
-              margin: const EdgeInsets.only(left: 15.0, right: 15.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                crossAxisAlignment: CrossAxisAlignment.end,
-                children: const [
-                  Text(
-                    'Choose Brand',
-                    style: TextStyle(fontSize: 22, fontWeight: FontWeight.w500),
+            SliverList(
+              delegate: SliverChildListDelegate(
+                [
+                  _space(20.0),
+                  const Header(
+                    title: 'Hemendra',
+                    subtitle: 'Welcome to Laza.',
                   ),
-                  Text(
-                    'View All',
-                    style: TextStyle(color: Colors.grey, fontSize: 15),
+                  _space(20.0),
+                  const SearchBar(),
+                  _space(20.0),
+                  const TextAndViewAll(
+                    fontWeight: FontWeight.w500,
+                    title: 'Choose Brand',
                   ),
+                  _space(10.0),
+                  const Brands(),
+                  _space(20.0),
+                  const TextAndViewAll(
+                    fontWeight: FontWeight.w400,
+                    title: 'New Arrival',
+                  ),
+                  const NewArrivalGrid(),
                 ],
               ),
             ),
-            _space(10.0),
-            const Brands(),
-            _space(10.0),
-            Container(
-                margin: const EdgeInsets.only(
-                  left: 15,
-                  right: 15,
-                ),
-                child: const NewArrivalTile()),
-            //const NewArrivalGrid(),
           ],
         ),
       ),

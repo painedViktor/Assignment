@@ -7,19 +7,22 @@ class Header extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.start,
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text(
-          title,
-          style: const TextStyle(fontSize: 40.0, fontWeight: FontWeight.bold),
-        ),
-        Text(
-          subtitle,
-          style: const TextStyle(color: Colors.grey, fontSize: 15),
-        )
-      ],
+    return Container(
+      margin: const EdgeInsets.only(left: 15, right: 15),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            title,
+            style: const TextStyle(fontSize: 40.0, fontWeight: FontWeight.bold),
+          ),
+          Text(
+            subtitle,
+            style: const TextStyle(color: Colors.grey, fontSize: 15),
+          )
+        ],
+      ),
     );
   }
 }

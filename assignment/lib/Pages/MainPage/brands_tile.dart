@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
 class BrandsTile extends StatelessWidget {
   final String title;
@@ -10,7 +8,9 @@ class BrandsTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.only(left: 15.0, ),
+      margin: const EdgeInsets.only(
+        left: 15.0,
+      ),
       decoration: const BoxDecoration(
         borderRadius: BorderRadius.all(Radius.circular(5)),
         color: Color.fromARGB(255, 229, 228, 228),
@@ -28,7 +28,7 @@ class BrandsTile extends StatelessWidget {
             child: icon,
           ),
           Container(
-            margin: const EdgeInsets.only(left: 6,right: 6),
+            margin: const EdgeInsets.only(left: 6, right: 6),
             child: Text(
               title,
               style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w700),

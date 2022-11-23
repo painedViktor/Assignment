@@ -16,15 +16,14 @@ class _BrandsState extends State<Brands> {
       child: ListView(
         physics: const BouncingScrollPhysics(),
         scrollDirection: Axis.horizontal,
-        //itemExtent: 120.0,
         children: const [
-          BrandsTile(title: 'Adidas', icon: Icon (Icons.sunny)),
-          BrandsTile(title: 'Nike', icon: Icon (Icons.radar)),
-          BrandsTile(title: 'Puma', icon: Icon (Icons.cloud)),
-          BrandsTile(title: 'Adidas', icon: Icon (Icons.sunny)),
-          BrandsTile(title: 'Adidas', icon: Icon (Icons.sunny)),
-          BrandsTile(title: 'Adidas', icon: Icon (Icons.sunny)),
-          BrandsTile(title: 'Adidas', icon: Icon (Icons.sunny)),
+          BrandsTile(title: 'Adidas', icon: Icon(Icons.sunny)),
+          BrandsTile(title: 'Nike', icon: Icon(Icons.radar)),
+          BrandsTile(title: 'Puma', icon: Icon(Icons.cloud)),
+          BrandsTile(title: 'Adidas', icon: Icon(Icons.sunny)),
+          BrandsTile(title: 'Adidas', icon: Icon(Icons.sunny)),
+          BrandsTile(title: 'Adidas', icon: Icon(Icons.sunny)),
+          BrandsTile(title: 'Adidas', icon: Icon(Icons.sunny)),
         ],
       ),
     );

@@ -1,3 +1,4 @@
+import 'package:assignment/Pages/MainPage/new_arrival_tile.dart';
 import 'package:flutter/material.dart';
 
 class NewArrivalGrid extends StatefulWidget {
@@ -10,13 +11,31 @@ class NewArrivalGrid extends StatefulWidget {
 class _NewArrivalGridState extends State<NewArrivalGrid> {
   @override
   Widget build(BuildContext context) {
-    return GridView(
-      gridDelegate:
-         const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
-      children: [
-        
+    return Wrap(
+      direction: Axis.horizontal,
+      alignment: WrapAlignment.spaceEvenly,
+      children: const [
+        NewArrivalTile(
+            image: 'assets/Clothes/adidas2.jpg',
+            description: 'amazing clothes bro super',
+            priceInDollars: 125),
+        NewArrivalTile(
+            image: 'assets/Clothes/nike.jpeg',
+            description: 'amazing r',
+            priceInDollars: 125),
+        NewArrivalTile(
+            image: 'assets/Clothes/nike.jpeg',
+            description: 'amazing r',
+            priceInDollars: 125),
+        NewArrivalTile(
+            image: 'assets/Clothes/nike2.png',
+            description: 'amazing r',
+            priceInDollars: 125),
+        NewArrivalTile(
+            image: 'assets/Clothes/adidas2.jpg',
+            description: 'amazing clothes bro super',
+            priceInDollars: 125),
       ],
     );
-
   }
 }

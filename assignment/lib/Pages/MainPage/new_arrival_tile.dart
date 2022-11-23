@@ -1,13 +1,20 @@
 import 'package:flutter/material.dart';
 
 class NewArrivalTile extends StatelessWidget {
-  const NewArrivalTile({super.key});
+  final String image;
+  final String description;
+  final int priceInDollars;
+  const NewArrivalTile(
+      {super.key,
+      required this.description,
+      required this.image,
+      required this.priceInDollars});
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      //height: 310,
-      width: 180,
+    return Container(
+      margin: const EdgeInsets.only(top: 15),
+      width: 170,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -15,15 +22,18 @@ class NewArrivalTile extends StatelessWidget {
             children: [
               SizedBox(
                 height: 230,
-                width: 180,
-                child: Image.asset(
-                  'assets/Clothes/adidas2.jpg',
-                  fit: BoxFit.cover,
+                width: 170,
+                child: ClipRRect(
+                  borderRadius: const BorderRadius.all(Radius.circular(13)),
+                  child: Image.asset(
+                    image,
+                    fit: BoxFit.cover,
+                  ),
                 ),
               ),
               Positioned(
-                top: 10,
-                right: 10,
+                top: 5,
+                right: 5,
                 child: IconButton(
                   icon: const Icon(Icons.heart_broken),
                   onPressed: () {},
@@ -34,16 +44,19 @@ class NewArrivalTile extends StatelessWidget {
           const SizedBox(
             height: 5,
           ),
-          const Text(
-            'amazing clothes',
-            style: TextStyle(
+          Text(
+            description,
+            style: const TextStyle(
               fontSize: 17,
             ),
             maxLines: 2,
           ),
-          const Text(
-            '\$125',
-            style: TextStyle(fontSize: 21, fontWeight: FontWeight.w500),
+          Text(
+            '\$$priceInDollars',
+            style: const TextStyle(
+              fontSize: 21,
+              fontWeight: FontWeight.w500,
+            ),
             maxLines: 2,
           ),
         ],
