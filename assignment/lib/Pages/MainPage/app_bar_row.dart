@@ -21,6 +21,7 @@ class AppBarRow extends StatelessWidget {
             shape: CircleBorder(),
           ),
           child: IconButton(
+            splashRadius: 1,
             onPressed: () {},
             icon: leftIcon,
           ),
@@ -43,6 +44,7 @@ class AppBarRow extends StatelessWidget {
             shape: CircleBorder(),
           ),
           child: IconButton(
+            splashRadius: 1,
             onPressed: () {},
             icon: rightIcon,
           ),

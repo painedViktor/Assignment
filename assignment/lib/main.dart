@@ -63,7 +63,7 @@ class _MyAppState extends State<MyApp> {
                 icon: Padding(
                   padding: EdgeInsets.only(top: 19.0),
                   child: Icon(
-                    Icons.heart_broken,
+                    Icons.favorite_outline,
                   ),
                 ),
                 label: '',
@@ -72,7 +72,7 @@ class _MyAppState extends State<MyApp> {
                 icon: Padding(
                   padding: EdgeInsets.only(top: 19.0),
                   child: Icon(
-                    Icons.heart_broken,
+                    Icons.person_outline,
                   ),
                 ),
                 label: '',
@@ -81,7 +81,7 @@ class _MyAppState extends State<MyApp> {
                 icon: Padding(
                   padding: EdgeInsets.only(top: 19.0),
                   child: Icon(
-                    Icons.heart_broken,
+                    Icons.account_balance_wallet_outlined,
                   ),
                 ),
                 label: '',

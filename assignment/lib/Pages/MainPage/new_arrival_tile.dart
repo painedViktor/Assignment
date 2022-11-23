@@ -35,7 +35,8 @@ class NewArrivalTile extends StatelessWidget {
                 top: 5,
                 right: 5,
                 child: IconButton(
-                  icon: const Icon(Icons.heart_broken),
+                  splashRadius: 1,
+                  icon: const Icon(Icons.favorite_outline),
                   onPressed: () {},
                 ),
               )

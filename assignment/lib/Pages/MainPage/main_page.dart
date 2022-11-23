@@ -25,11 +25,11 @@ class MainPage extends StatelessWidget {
               title: AppBarRow(
                 title: '375×Hug',
                 leftIcon: Icon(
-                  Icons.add,
+                  Icons.dehaze,
                   color: Colors.black,
                 ),
                 rightIcon: Icon(
-                  Icons.remove,
+                  Icons.shopping_bag_outlined,
                   color: Colors.black,
                 ),
               ),

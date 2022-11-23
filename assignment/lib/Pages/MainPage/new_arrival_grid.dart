@@ -16,25 +16,30 @@ class _NewArrivalGridState extends State<NewArrivalGrid> {
       alignment: WrapAlignment.spaceEvenly,
       children: const [
         NewArrivalTile(
-            image: 'assets/Clothes/adidas2.jpg',
-            description: 'amazing clothes bro super',
-            priceInDollars: 125),
+          image: 'assets/Clothes/adidas2.jpg',
+          description: 'amazing clothes bro super',
+          priceInDollars: 125,
+        ),
         NewArrivalTile(
-            image: 'assets/Clothes/nike.jpeg',
-            description: 'amazing r',
-            priceInDollars: 125),
+          image: 'assets/Clothes/nike.jpeg',
+          description: 'amazing r',
+          priceInDollars: 125,
+        ),
         NewArrivalTile(
-            image: 'assets/Clothes/nike.jpeg',
-            description: 'amazing r',
-            priceInDollars: 125),
+          image: 'assets/Clothes/nike.jpeg',
+          description: 'amazing r',
+          priceInDollars: 125,
+        ),
         NewArrivalTile(
-            image: 'assets/Clothes/nike2.png',
-            description: 'amazing r',
-            priceInDollars: 125),
+          image: 'assets/Clothes/nike2.png',
+          description: 'amazing r',
+          priceInDollars: 125,
+        ),
         NewArrivalTile(
-            image: 'assets/Clothes/adidas2.jpg',
-            description: 'amazing clothes bro super',
-            priceInDollars: 125),
+          image: 'assets/Clothes/adidas2.jpg',
+          description: 'amazing clothes bro super',
+          priceInDollars: 125,
+        ),
       ],
     );
   }
